@@ -11,3 +11,6 @@ Para mas información sobre como instalar y usar git:
 https://guides.github.com/activities/hello-world/
 
 https://help.github.com/articles/set-up-git/
+
+
+Se recomienda a los grupos que una vez se unan incluyan una breve descripcion de sus objetivos en el archivo README de su rama
