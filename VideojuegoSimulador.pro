@@ -8,15 +8,19 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = CEsferaModeloCinematico
+TARGET = VideojuegoSimulador
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    cesfera.cpp
+    cesfera.cpp \
+    ccaja.cpp \
+    cpersona.cpp
 
 HEADERS  += mainwindow.h \
-    cesfera.h
+    cesfera.h \
+    ccaja.h \
+    cpersona.h
 
 FORMS    += mainwindow.ui
