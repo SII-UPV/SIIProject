@@ -38,48 +38,55 @@
 **
 ****************************************************************************/
 
-#include <QApplication>
+#include <QtWidgets>
+#include <QtNetwork>
 
-#include "mainwindow.h"
+#include "sender.h"
 
-static const float Pi = 3.14159265358979323846264338327950288419717;
-static float TwoPi = 2.0 * Pi;
-
-float RadianesAGrados(float _angulo)
+Sender::Sender(QWidget *parent)
+    : QWidget(parent)
 {
-    return _angulo * 360.0 / TwoPi;
+    statusLabel = new QLabel(tr("Ready to broadcast datagrams on port 45454"));
+    statusLabel->setWordWrap(true);
+
+    startButton = new QPushButton(tr("&Start"));
+    quitButton = new QPushButton(tr("&Quit"));
+
+    buttonBox = new QDialogButtonBox;
+    buttonBox->addButton(startButton, QDialogButtonBox::ActionRole);
+    buttonBox->addButton(quitButton, QDialogButtonBox::RejectRole);
+
+    timer = new QTimer(this);
+//! [0]
+    udpSocket = new QUdpSocket(this);
+//! [0]
+    messageNo = 1;
+
+    connect(startButton, SIGNAL(clicked()), this, SLOT(startBroadcasting()));
+    connect(quitButton, SIGNAL(clicked()), this, SLOT(close()));
+    connect(timer, SIGNAL(timeout()), this, SLOT(broadcastDatagram()));
+
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    mainLayout->addWidget(statusLabel);
+    mainLayout->addWidget(buttonBox);
+    setLayout(mainLayout);
+
+    setWindowTitle(tr("Broadcast Sender"));
 }
 
-float GradosARadianes(float _angulo)
+void Sender::startBroadcasting()
 {
-    return _angulo * TwoPi / 360.0;
+    startButton->setEnabled(false);
+    timer->start(1000);
 }
 
-float NormalizarAnguloGrados(float _angulo)
+void Sender::broadcastDatagram()
 {
-    while (_angulo < 0.0)
-        _angulo += 360.0;
-    while (_angulo > 360.0)
-        _angulo -= 360.0;
-    return _angulo;
+    statusLabel->setText(tr("Now broadcasting datagram %1").arg(messageNo));
+//! [1]
+    QByteArray datagram = "Broadcast message " + QByteArray::number(messageNo);
+    udpSocket->writeDatagram(datagram.data(), datagram.size(),
+                             QHostAddress::Broadcast, 45454);
+//! [1]
+    ++messageNo;
 }
-
-float NormalizarAnguloRadianes(float _angulo)
-{
-    while (_angulo < 0.0)
-        _angulo += TwoPi;
-    while (_angulo > TwoPi)
-        _angulo -= TwoPi;
-    return _angulo;
-}
-
-int main(int argc, char *argv[])
-{
-    QApplication app(argc, argv);
-
-    MainWindow w;
-    w.show();
-
-    return app.exec();
-}
-

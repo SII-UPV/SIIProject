@@ -38,48 +38,52 @@
 **
 ****************************************************************************/
 
-#include <QApplication>
+#include <QtWidgets>
+#include <QtNetwork>
 
-#include "mainwindow.h"
+#include "receiver.h"
 
-static const float Pi = 3.14159265358979323846264338327950288419717;
-static float TwoPi = 2.0 * Pi;
-
-float RadianesAGrados(float _angulo)
+Receiver::Receiver(QWidget *parent)
+    : QWidget(parent)
 {
-    return _angulo * 360.0 / TwoPi;
+    statusLabel = new QLabel(tr("Listening for broadcasted messages"));
+    statusLabel->setWordWrap(true);
+
+    quitButton = new QPushButton(tr("&Quit"));
+
+//! [0]
+    udpSocket = new QUdpSocket(this);
+    udpSocket->bind(45454, QUdpSocket::ShareAddress);
+//! [0]
+
+//! [1]
+    connect(udpSocket, SIGNAL(readyRead()),
+            this, SLOT(processPendingDatagrams()));
+//! [1]
+    connect(quitButton, SIGNAL(clicked()), this, SLOT(close()));
+
+    QHBoxLayout *buttonLayout = new QHBoxLayout;
+    buttonLayout->addStretch(1);
+    buttonLayout->addWidget(quitButton);
+    buttonLayout->addStretch(1);
+
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    mainLayout->addWidget(statusLabel);
+    mainLayout->addLayout(buttonLayout);
+    setLayout(mainLayout);
+
+    setWindowTitle(tr("Broadcast Receiver"));
 }
 
-float GradosARadianes(float _angulo)
+void Receiver::processPendingDatagrams()
 {
-    return _angulo * TwoPi / 360.0;
+//! [2]
+    while (udpSocket->hasPendingDatagrams()) {
+        QByteArray datagram;
+        datagram.resize(udpSocket->pendingDatagramSize());
+        udpSocket->readDatagram(datagram.data(), datagram.size());
+        statusLabel->setText(tr("Received datagram: \"%1\"")
+                             .arg(datagram.data()));
+    }
+//! [2]
 }
-
-float NormalizarAnguloGrados(float _angulo)
-{
-    while (_angulo < 0.0)
-        _angulo += 360.0;
-    while (_angulo > 360.0)
-        _angulo -= 360.0;
-    return _angulo;
-}
-
-float NormalizarAnguloRadianes(float _angulo)
-{
-    while (_angulo < 0.0)
-        _angulo += TwoPi;
-    while (_angulo > TwoPi)
-        _angulo -= TwoPi;
-    return _angulo;
-}
-
-int main(int argc, char *argv[])
-{
-    QApplication app(argc, argv);
-
-    MainWindow w;
-    w.show();
-
-    return app.exec();
-}
-

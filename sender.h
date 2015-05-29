@@ -38,48 +38,37 @@
 **
 ****************************************************************************/
 
-#include <QApplication>
+#ifndef SENDER_H
+#define SENDER_H
 
-#include "mainwindow.h"
+#include <QWidget>
 
-static const float Pi = 3.14159265358979323846264338327950288419717;
-static float TwoPi = 2.0 * Pi;
+QT_BEGIN_NAMESPACE
+class QDialogButtonBox;
+class QLabel;
+class QPushButton;
+class QTimer;
+class QUdpSocket;
+QT_END_NAMESPACE
 
-float RadianesAGrados(float _angulo)
+class Sender : public QWidget
 {
-    return _angulo * 360.0 / TwoPi;
-}
+    Q_OBJECT
 
-float GradosARadianes(float _angulo)
-{
-    return _angulo * TwoPi / 360.0;
-}
+public:
+    Sender(QWidget *parent = 0);
 
-float NormalizarAnguloGrados(float _angulo)
-{
-    while (_angulo < 0.0)
-        _angulo += 360.0;
-    while (_angulo > 360.0)
-        _angulo -= 360.0;
-    return _angulo;
-}
+    void startBroadcasting();
+    void broadcastDatagram();
 
-float NormalizarAnguloRadianes(float _angulo)
-{
-    while (_angulo < 0.0)
-        _angulo += TwoPi;
-    while (_angulo > TwoPi)
-        _angulo -= TwoPi;
-    return _angulo;
-}
+private:
+    QLabel *statusLabel;
+    QPushButton *startButton;
+    QPushButton *quitButton;
+    QDialogButtonBox *buttonBox;
+    QUdpSocket *udpSocket;
+    QTimer *timer;
+    int messageNo;
+};
 
-int main(int argc, char *argv[])
-{
-    QApplication app(argc, argv);
-
-    MainWindow w;
-    w.show();
-
-    return app.exec();
-}
-
+#endif
