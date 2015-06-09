@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/images/xBox">
+        <file>Images/xBox/X.jpg</file>
+        <file>Images/xBox/A.jpg</file>
+        <file>Images/xBox/B.jpg</file>
+        <file>Images/xBox/Y.jpg</file>
+    </qresource>
+    <qresource prefix="/images/PS3">
+        <file>Images/PS3/Circle.jpg</file>
+        <file>Images/PS3/cross.jpg</file>
+        <file>Images/PS3/Square.jpg</file>
+        <file>Images/PS3/Triangle.jpg</file>
+    </qresource>
+</RCC>

@@ -6,351 +6,87 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>981</width>
-    <height>532</height>
+    <width>379</width>
+    <height>272</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QSlider" name="xSliderPosicion">
+   <widget class="QTextBrowser" name="textBrowser">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>200</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>-275</number>
-    </property>
-    <property name="maximum">
-     <number>275</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QSlider" name="xSliderVelocidad">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>200</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>-200</number>
-    </property>
-    <property name="maximum">
-     <number>200</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelPosicionx">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>50</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>px = 0.0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelVelocidadx">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>80</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>vx = 0.0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelAceleracionx">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>120</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>ax = 0.0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelTiempo">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>10</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>t = 0.0</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBoxSimular">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
+      <x>50</x>
       <y>20</y>
-      <width>101</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Simular</string>
-    </property>
-   </widget>
-   <widget class="QGraphicsView" name="graphicsView">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>0</y>
-      <width>621</width>
-      <height>451</height>
+      <width>171</width>
+      <height>181</height>
      </rect>
     </property>
    </widget>
-   <widget class="QSlider" name="ySliderPosicion">
+   <widget class="QPushButton" name="StartButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>210</y>
-      <width>200</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>-210</number>
-    </property>
-    <property name="maximum">
-     <number>210</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelPosiciony">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>200</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>py = 0.0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelVelocidady">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>240</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>vy = 0.0</string>
-    </property>
-   </widget>
-   <widget class="QSlider" name="ySliderVelocidad">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>240</y>
-      <width>200</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>-200</number>
-    </property>
-    <property name="maximum">
-     <number>200</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelAceleraciony">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>280</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>ay = 0.0</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="boton_nitrox">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>120</y>
+      <x>240</x>
+      <y>20</y>
       <width>75</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Nitro</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="boton_nitroy">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>290</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Nitro</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelTiempo_juego">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>370</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>t = 0.0</string>
+     <string>Start</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>410</y>
-      <width>281</width>
+      <x>260</x>
+      <y>60</y>
+      <width>47</width>
       <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
-    </property>
-   </widget>
-   <widget class="QScrollBar" name="scrollVelocidad_juego">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>350</y>
-      <width>241</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
+     <string>Press:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>330</y>
-      <width>251</width>
-      <height>16</height>
+      <x>230</x>
+      <y>85</y>
+      <width>50</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
-     <string>VELOCIDAD DEL JUEGO</string>
+     <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonNuevaEsfera">
+   <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>380</y>
-      <width>75</width>
-      <height>23</height>
+      <x>320</x>
+      <y>85</y>
+      <width>50</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
-     <string>Nueva Esfera</string>
+     <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonNitro">
+   <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>400</y>
-      <width>75</width>
-      <height>23</height>
+      <x>260</x>
+      <y>120</y>
+      <width>47</width>
+      <height>13</height>
      </rect>
     </property>
     <property name="text">
-     <string>Nitro</string>
+     <string>To Start</string>
     </property>
    </widget>
   </widget>
@@ -359,16 +95,10 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>981</width>
+     <width>379</width>
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuCEsfera_Modelo_Cinem_tico_Una_Dimensi_n">
-    <property name="title">
-     <string>CEsfera - Modelo Cinemático - Una Dimensión</string>
-    </property>
-   </widget>
-   <addaction name="menuCEsfera_Modelo_Cinem_tico_Una_Dimensi_n"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
