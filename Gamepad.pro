@@ -6,7 +6,7 @@
 
 
 
-TARGET = Gamepad2
+TARGET = Gamepad
 TEMPLATE = app
 
 CONFIG    += qt thread c++11

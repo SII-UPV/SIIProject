@@ -17,7 +17,7 @@ public:
     ~GamepadInfo();
     QString toString();
     int availablePads();
-    Gamepad* getActive();
+    Gamepad* getActive(int button=1);
     void update();
     QList<Gamepad *>* Gamepads;
 

@@ -27,6 +27,8 @@ private:
     QTimer* timer;
     Gamepad* gamepad;
     Ui::GamepadDialog *ui;
+protected:
+    void closeEvent(QCloseEvent *event);
 };
 
 #endif // GAMEPADDIALOG_H

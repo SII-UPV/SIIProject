@@ -7,6 +7,7 @@ GamepadDialog::GamepadDialog(QWidget *parent, Gamepad *_gamepad) :
 {
 
     gamepad=_gamepad;
+    gamepad->setActive(true);
 
     ui->setupUi(this);
 
@@ -33,6 +34,7 @@ GamepadDialog::~GamepadDialog()
 }
 
 void GamepadDialog::Update(){
+
     TState state=gamepad->getState();
     ui->Button1->setChecked(state.button1);
     ui->Button2->setChecked(state.button2);
@@ -44,5 +46,11 @@ void GamepadDialog::Update(){
 
     ui->yAxis->setValue(((state.joy1.y+JoyMax)/(2.0*JoyMax))*100);
     if(ui->yAxis->value()>50-DeadZone&&ui->yAxis->value()<50+DeadZone)ui->yAxis->setValue(50);
+
+}
+void GamepadDialog::closeEvent(QCloseEvent *event)
+{
+    gamepad->setActive(false);
+    close();
 
 }

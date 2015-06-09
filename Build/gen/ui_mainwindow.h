@@ -57,10 +57,10 @@ public:
         label->setGeometry(QRect(260, 60, 47, 16));
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(230, 85, 50, 30));
+        label_2->setGeometry(QRect(260, 80, 50, 30));
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(320, 85, 50, 30));
+        label_3->setGeometry(QRect(300, 80, 50, 30));
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setGeometry(QRect(260, 120, 47, 13));

@@ -1,9 +1,26 @@
 #include "gamepad.h"
 
+/******************************************************************
+ ******************************************************************
+ * Gamepad Handling Class                                         *
+ *                                                                *
+ * This class includes all the functions needed to get the state  *
+ * and information from the gamepads, proividing an abstraction   *
+ * layer from the base library (SDL)                              *
+ *                                                                *
+ * It works with the GamepadInfo Class                            *
+ *                                                                *
+ *                                                                *
+ ******************************************************************
+ ******************************************************************
+ */
 
 Gamepad::Gamepad()
 {
 }
+
+// Creates a new gamepad
+
 Gamepad::Gamepad(SDL_Joystick* _joystick, QString _name){
     joystick = _joystick;
     name     = _name;
@@ -21,6 +38,19 @@ Gamepad::Gamepad(SDL_Joystick* _joystick, QString _name){
 Gamepad::~Gamepad()
 {
 }
+
+/* This function returns a TState structure with the information about 4 buttons and 2 joysticks
+ *
+ * The joystick output is an integer value with range from -JoyMax to JoyMax
+ *
+ * The button setup is as follous:
+ *
+ *             Button4
+ *      Button3       Button2
+ *             Button1
+ *
+ * The button and joystick setup may vary on non-tested Gamepads
+ */
 TState Gamepad::getState(){
 
     SDL_JoystickUpdate();
@@ -49,15 +79,23 @@ TState Gamepad::getState(){
 
     return *State;
 }
+
 bool Gamepad::isActive(){
     return active;
 }
+
 void Gamepad::setActive(bool _active){
     active=_active;
 }
+
 QString Gamepad::getName(){
     return name;
 }
+/*
+ * The getButtonIcon Function returns a String with the resource path of the icons for each of the buttons
+ * From that path, the Image can be used.
+ *
+ */
 
 QString Gamepad::getButtonIcon(int button){
     if(tipo==PS3){
