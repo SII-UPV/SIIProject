@@ -100,19 +100,21 @@ QString Gamepad::getName(){
 QString Gamepad::getButtonIcon(int button){
     if(tipo==PS3){
         switch(button){
-            case 4: return ":/images/PS3/Images/PS3/Triangle.jpg" ;
-            case 2: return ":/images/PS3/Images/PS3/Circle.jpg" ;
-            case 1: return ":/images/PS3/Images/PS3/cross.jpg" ;
-            case 3: return ":/images/PS3/Images/PS3/Square.jpg" ;
+            case 0: return ":/images/PS3/Images/PS3/mandoPS3.png";
+            case 4: return ":/images/PS3/Images/PS3/TRIANGLE.jpg" ;
+            case 2: return ":/images/PS3/Images/PS3/CIRCLE.jpg" ;
+            case 1: return ":/images/PS3/Images/PS3/CROSS.jpg" ;
+            case 3: return ":/images/PS3/Images/PS3/SQUARE.jpg" ;
             default: return "";
         }
     }
     else{
         switch(button){
-            case 1: return ":/images/xBox/Images/xBox/A.jpg" ;
-            case 2: return ":/images/xBox/Images/xBox/B.jpg" ;
-            case 3: return ":/images/xBox/Images/xBox/X.jpg" ;
-            case 4: return ":/images/xBox/Images/xBox/Y.jpg" ;
+            case 0: return ":/images/xBox/Images/xBox/mandoXBox.png";
+            case 1: return ":/images/xBox/Images/xBox/A.png" ;
+            case 2: return ":/images/xBox/Images/xBox/B.png" ;
+            case 3: return ":/images/xBox/Images/xBox/X.png" ;
+            case 4: return ":/images/xBox/Images/xBox/Y.png" ;
             default: return "";
         }
     }

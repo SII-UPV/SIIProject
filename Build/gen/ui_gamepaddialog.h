@@ -37,6 +37,7 @@ public:
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
+    QLabel *label_4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -78,6 +79,9 @@ public:
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setGeometry(QRect(10, 65, 21, 16));
+        label_4 = new QLabel(centralwidget);
+        label_4->setObjectName(QStringLiteral("label_4"));
+        label_4->setGeometry(QRect(10, 102, 171, 81));
         GamepadDialog->setCentralWidget(centralwidget);
         menubar = new QMenuBar(GamepadDialog);
         menubar->setObjectName(QStringLiteral("menubar"));
@@ -102,6 +106,7 @@ public:
         label->setText(QApplication::translate("GamepadDialog", "Stick 1:", 0));
         label_2->setText(QApplication::translate("GamepadDialog", "X:", 0));
         label_3->setText(QApplication::translate("GamepadDialog", "Y:", 0));
+        label_4->setText(QString());
     } // retranslateUi
 
 };

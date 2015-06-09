@@ -121,14 +121,16 @@ compiler_rcc_make_all: gen/qrc_resources.cpp
 compiler_rcc_clean:
 	-$(DEL_FILE) gen\qrc_resources.cpp
 gen/qrc_resources.cpp: ../resources.qrc \
-		../Images/xBox/A.jpg \
-		../Images/xBox/Y.jpg \
-		../Images/xBox/X.jpg \
-		../Images/xBox/B.jpg \
-		../Images/PS3/cross.jpg \
-		../Images/PS3/Square.jpg \
-		../Images/PS3/Circle.jpg \
-		../Images/PS3/Triangle.jpg
+		../Images/xBox/X.png \
+		../Images/xBox/B.png \
+		../Images/xBox/A.png \
+		../Images/xBox/mandoXBox.png \
+		../Images/xBox/Y.png \
+		../Images/PS3/TRIANGLE.jpg \
+		../Images/PS3/CIRCLE.jpg \
+		../Images/PS3/CROSS.jpg \
+		../Images/PS3/SQUARE.jpg \
+		../Images/PS3/mandoPS3.png
 	C:\Qt\5.4\mingw491_32\bin\rcc.exe -name resources ..\resources.qrc -o gen\qrc_resources.cpp
 
 compiler_moc_header_make_all: gen/moc_mainwindow.cpp gen/moc_gamepaddialog.cpp
@@ -276,6 +278,8 @@ gen/moc_mainwindow.cpp: C:/Qt/5.4/mingw491_32/include/QtWidgets/QMainWindow \
 		../gamepad.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QDebug \
 		../gamepaddialog.h \
+		C:/Qt/5.4/mingw491_32/include/QtGui/QPicture \
+		C:/Qt/5.4/mingw491_32/include/QtGui/qpicture.h \
 		../mainwindow.h
 	C:\Qt\5.4\mingw491_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.4/mingw491_32/mkspecs/win32-g++ -IC:/Users/Joaquin/Documents/GitHub/SIIProject/SIIProject/SIIProject -IC:/Users/Joaquin/Documents/GitHub/SIIProject/SIIProject/SIIProject -IC:/SDL1.2/SDL-1.2.15/include/SDL -IC:/Qt/5.4/mingw491_32/include -IC:/Qt/5.4/mingw491_32/include/QtWidgets -IC:/Qt/5.4/mingw491_32/include/QtGui -IC:/Qt/5.4/mingw491_32/include/QtNetwork -IC:/Qt/5.4/mingw491_32/include/QtCore -I. ..\mainwindow.h -o gen\moc_mainwindow.cpp
 
@@ -388,6 +392,8 @@ gen/moc_gamepaddialog.cpp: C:/Qt/5.4/mingw491_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qtimer.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QDebug \
+		C:/Qt/5.4/mingw491_32/include/QtGui/QPicture \
+		C:/Qt/5.4/mingw491_32/include/QtGui/qpicture.h \
 		../gamepad.h \
 		C:/SDL1.2/SDL-1.2.15/include/SDL/SDL.h \
 		C:/SDL1.2/SDL-1.2.15/include/SDL/SDL_main.h \
@@ -588,6 +594,8 @@ debug/main.o: ../main.cpp ../mainwindow.h \
 		../gamepad.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QDebug \
 		../gamepaddialog.h \
+		C:/Qt/5.4/mingw491_32/include/QtGui/QPicture \
+		C:/Qt/5.4/mingw491_32/include/QtGui/qpicture.h \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QApplication \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/qapplication.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qcoreapplication.h \
@@ -740,6 +748,8 @@ debug/mainwindow.o: ../mainwindow.cpp ../mainwindow.h \
 		../gamepad.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QDebug \
 		../gamepaddialog.h \
+		C:/Qt/5.4/mingw491_32/include/QtGui/QPicture \
+		C:/Qt/5.4/mingw491_32/include/QtGui/qpicture.h \
 		gen/ui_mainwindow.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QVariant \
 		C:/Qt/5.4/mingw491_32/include/QtWidgets/QAction \
@@ -1103,6 +1113,8 @@ debug/gamepaddialog.o: ../gamepaddialog.cpp ../gamepaddialog.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qtimer.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.4/mingw491_32/include/QtCore/QDebug \
+		C:/Qt/5.4/mingw491_32/include/QtGui/QPicture \
+		C:/Qt/5.4/mingw491_32/include/QtGui/qpicture.h \
 		../gamepad.h \
 		C:/SDL1.2/SDL-1.2.15/include/SDL/SDL.h \
 		C:/SDL1.2/SDL-1.2.15/include/SDL/SDL_main.h \

@@ -4,7 +4,9 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QDebug>
+#include <QPicture>
 #include "gamepad.h"
+
 
 namespace Ui {
 class GamepadDialog;

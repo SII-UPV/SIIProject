@@ -13,6 +13,10 @@ GamepadDialog::GamepadDialog(QWidget *parent, Gamepad *_gamepad) :
 
     this->setWindowTitle(gamepad->getName());
 
+    this->setWindowIcon(QIcon(gamepad->getButtonIcon(0)));
+
+    ui->label_4->setPixmap(QIcon(gamepad->getButtonIcon(0)).pixmap(QSize(170,80)));
+
     ui->Button1->setIcon(QIcon(gamepad->getButtonIcon(1)));
     ui->Button1->setIconSize(QSize(30,30));
     ui->Button2->setIcon(QIcon(gamepad->getButtonIcon(2)));

@@ -7,8 +7,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->label_2->setPixmap(QPixmap(":/images/xBox/Images/xBox/A.jpg"));
-    ui->label_3->setPixmap(QPixmap(":/images/PS3/Images/PS3/cross.jpg"));
+    ui->label_2->setPixmap((QIcon(":/images/xBox/Images/xBox/A.png").pixmap(QSize(30,30))));
+    ui->label_3->setPixmap((QIcon(":/images/PS3/Images/PS3/CROSS.jpg").pixmap(QSize(30,30))));
     time = new QTimer();
 
     connect(time, SIGNAL(timeout()),this,SLOT(checkActive()));
