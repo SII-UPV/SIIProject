@@ -17,7 +17,11 @@
 #include "cescena.h"
 #include "cacercade.h"
 #include "cvista2d.h"
+<<<<<<< HEAD
 #include "cvista3d.h"
+=======
+//#include "cvista3d.h"
+>>>>>>> origin/master
 #include "ccontrolpersona.h"
 #include "ccontrolrobot.h"
 
@@ -41,7 +45,11 @@ class MainWindow : public QMainWindow
     CAcercaDe *acerca_de;
 
     std::vector<CVista2D*> vistas2d;
+<<<<<<< HEAD
     std::vector<CVista3D*> vistas3d;
+=======
+//    std::vector<CVista3D*> vistas3d;
+>>>>>>> origin/master
 
     std::vector<CControlPersona*> controles_personas;
     std::vector<CControlRobot*>   controles_robots;
@@ -72,7 +80,11 @@ public slots:
     void BorrarRobots  (void);
 
     void NuevaVista2D(void);
+<<<<<<< HEAD
     void NuevaVista3D(void);
+=======
+//    void NuevaVista3D(void);
+>>>>>>> origin/master
 
     void NuevoControlPersona(void);
     void NuevoControlRobot(void);

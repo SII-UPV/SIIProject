@@ -68,6 +68,7 @@ typedef struct{float x, y;} TAceleracion;
 #define NUM_ROBOTS_INICIAL   1  //1x1
 
 //Escenario
+<<<<<<< HEAD
 //#define X_MIN -50.0
 //#define X_MAX  50.0
 //#define Y_MIN -50.0
@@ -76,6 +77,12 @@ typedef struct{float x, y;} TAceleracion;
 #define X_MAX  10.0
 #define Y_MIN -10.0
 #define Y_MAX  10.0
+=======
+#define X_MIN -50.0
+#define X_MAX  50.0
+#define Y_MIN -50.0
+#define Y_MAX  50.0
+>>>>>>> origin/master
 
 //Rozamiento
 #define CR_ESFERA_SUELO 0.1

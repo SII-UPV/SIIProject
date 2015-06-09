@@ -11,10 +11,17 @@
 #include "cpersona.h"
 #include "crobot.h"
 #include "cvista2d.h"
+<<<<<<< HEAD
 #include "cvista3d.h"
 
 class CVista2D;
 class CVista3D;
+=======
+//#include "cvista3d.h"
+
+class CVista2D;
+//class CVista3D;
+>>>>>>> origin/master
 
 class CEscena
 {
@@ -25,7 +32,11 @@ class CEscena
 
     std::list<CEsfera*> esferas_en_suelo;
     std::list<CVista2D*> vistas2d;
+<<<<<<< HEAD
     std::list<CVista3D*> vistas3d;
+=======
+//    std::list<CVista3D*> vistas3d;
+>>>>>>> origin/master
 public:
     CEscena();
 
@@ -49,9 +60,15 @@ public:
     void BorrarRobots  (void);
 
     void ConectarVista2D(CVista2D* vista2d);
+<<<<<<< HEAD
     void ConectarVista3D(CVista3D* vista3d);
     void DesconectarVista2D(CVista2D* vista2d);
     void DesconectarVista3D(CVista3D* vista3d);
+=======
+//    void ConectarVista3D(CVista3D* vista3d);
+    void DesconectarVista2D(CVista2D* vista2d);
+//    void DesconectarVista3D(CVista3D* vista3d);
+>>>>>>> origin/master
     void Mostrar(void);
     void Evolucionar(float t);
 

@@ -49,7 +49,11 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButtonBorrarRobots  , SIGNAL(clicked()), this, SLOT(BorrarRobots()));
 
     connect(ui->pushButtonNuevaVista2D, SIGNAL(clicked()), this, SLOT(NuevaVista2D()));
+<<<<<<< HEAD
     connect(ui->pushButtonNuevaVista3D, SIGNAL(clicked()), this, SLOT(NuevaVista3D()));
+=======
+//    connect(ui->pushButtonNuevaVista3D, SIGNAL(clicked()), this, SLOT(NuevaVista3D()));
+>>>>>>> origin/master
 
     connect(ui->pushButtonNuevoControlPersona, SIGNAL(clicked()), this, SLOT(NuevoControlPersona()));
     connect(ui->pushButtonNuevoControlRobot  , SIGNAL(clicked()), this, SLOT(NuevoControlRobot()));
@@ -144,11 +148,14 @@ void MainWindow::NuevaEsfera(void)
     {
         (*ivista2d)->NuevaEsfera(color, posicion);
     }
+<<<<<<< HEAD
     std::vector<CVista3D*>::iterator ivista3d;
     for(ivista3d = vistas3d.begin(); ivista3d != vistas3d.end(); ivista3d++)
     {
         (*ivista3d)->NuevaEsfera(color, posicion);
     }
+=======
+>>>>>>> origin/master
     }
 }
 
@@ -170,11 +177,14 @@ void MainWindow::NuevaCaja(void)
     {
         (*ivista2d)->NuevaCaja(color, posicion);
     }
+<<<<<<< HEAD
     std::vector<CVista3D*>::iterator ivista3d;
     for(ivista3d = vistas3d.begin(); ivista3d != vistas3d.end(); ivista3d++)
     {
         (*ivista3d)->NuevaCaja(color, posicion);
     }
+=======
+>>>>>>> origin/master
     }
 }
 
@@ -200,11 +210,14 @@ void MainWindow::NuevaPersona(void)
     {
         (*ivista2d)->NuevaPersona(color, posicion, orientacion);
     }
+<<<<<<< HEAD
     std::vector<CVista3D*>::iterator ivista3d;
     for(ivista3d = vistas3d.begin(); ivista3d != vistas3d.end(); ivista3d++)
     {
         (*ivista3d)->NuevaPersona(color, posicion, orientacion);
     }
+=======
+>>>>>>> origin/master
     }
 }
 
@@ -230,11 +243,14 @@ void MainWindow::NuevoRobot(void)
     {
         (*ivista2d)->NuevoRobot(color, posicion, orientacion);
     }
+<<<<<<< HEAD
     std::vector<CVista3D*>::iterator ivista3d;
     for(ivista3d = vistas3d.begin(); ivista3d != vistas3d.end(); ivista3d++)
     {
         (*ivista3d)->NuevoRobot(color, posicion, orientacion);
     }
+=======
+>>>>>>> origin/master
     }
 }
 
@@ -253,11 +269,14 @@ void MainWindow::BorrarEsferas(void)
     {
         (*ivista2d)->BorrarEsferas();
     }
+<<<<<<< HEAD
     std::vector<CVista3D*>::iterator ivista3d;
     for(ivista3d = vistas3d.begin(); ivista3d != vistas3d.end(); ivista3d++)
     {
         (*ivista3d)->BorrarEsferas();
     }
+=======
+>>>>>>> origin/master
     escena->BorrarEsferas();
 }
 
@@ -268,11 +287,14 @@ void MainWindow::BorrarCajas(void)
     {
         (*ivista2d)->BorrarCajas();
     }
+<<<<<<< HEAD
     std::vector<CVista3D*>::iterator ivista3d;
     for(ivista3d = vistas3d.begin(); ivista3d != vistas3d.end(); ivista3d++)
     {
         (*ivista3d)->BorrarCajas();
     }
+=======
+>>>>>>> origin/master
     escena->BorrarCajas();
 }
 
@@ -283,11 +305,14 @@ void MainWindow::BorrarPersonas(void)
     {
         (*ivista2d)->BorrarPersonas();
     }
+<<<<<<< HEAD
     std::vector<CVista3D*>::iterator ivista3d;
     for(ivista3d = vistas3d.begin(); ivista3d != vistas3d.end(); ivista3d++)
     {
         (*ivista3d)->BorrarPersonas();
     }
+=======
+>>>>>>> origin/master
     escena->BorrarPersonas();
 }
 
@@ -298,11 +323,14 @@ void MainWindow::BorrarRobots(void)
     {
         (*ivista2d)->BorrarRobots();
     }
+<<<<<<< HEAD
     std::vector<CVista3D*>::iterator ivista3d;
     for(ivista3d = vistas3d.begin(); ivista3d != vistas3d.end(); ivista3d++)
     {
         (*ivista3d)->BorrarRobots();
     }
+=======
+>>>>>>> origin/master
     escena->BorrarRobots();
 }
 
@@ -314,6 +342,7 @@ void MainWindow::NuevaVista2D(void)
     vista2d->show();
 }
 
+<<<<<<< HEAD
 void MainWindow::NuevaVista3D(void)
 {
     CVista3D* vista3d = new CVista3D();
@@ -321,6 +350,16 @@ void MainWindow::NuevaVista3D(void)
     vista3d->Escena(escena);
     vista3d->start();
 }
+=======
+//void MainWindow::NuevaVista3D(void)
+//{
+//    CVista3D* vista3d = new CVista3D;
+//    vistas3d.push_back(vista3d);
+//    vista3d->Escena(escena);
+//    vista3d->start();
+////    vista3d->show();
+//}
+>>>>>>> origin/master
 
 void MainWindow::NuevoControlPersona(void)
 {

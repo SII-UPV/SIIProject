@@ -110,20 +110,34 @@ void CEscena::ConectarVista2D(CVista2D* vista2d)
     vistas2d.push_back(vista2d);
 }
 
+<<<<<<< HEAD
 void CEscena::ConectarVista3D(CVista3D* vista3d)
 {
     vistas3d.push_back(vista3d);
 }
+=======
+//void CEscena::ConectarVista3D(CVista3D* vista3d)
+//{
+//    vistas3d.push_back(vista3d);
+//}
+>>>>>>> origin/master
 
 void CEscena::DesconectarVista2D(CVista2D* vista2d)
 {
     vistas2d.remove(vista2d);
 }
 
+<<<<<<< HEAD
 void CEscena::DesconectarVista3D(CVista3D* vista3d)
 {
     vistas3d.remove(vista3d);
 }
+=======
+//void CEscena::DesconectarVista3D(CVista3D* vista3d)
+//{
+//    vistas3d.remove(vista3d);
+//}
+>>>>>>> origin/master
 
 void CEscena::CogerEsfera(CEsfera* esfera, CPersona* persona)
 {
@@ -270,6 +284,7 @@ void CEscena::Mostrar(void)
         (*ivista2d)->Actualizar();
         (*ivista2d)->Mostrar();
     }
+<<<<<<< HEAD
 
     std::list<CVista3D*>::iterator ivista3d;
     for(ivista3d = vistas3d.begin(); ivista3d != vistas3d.end(); ivista3d++)
@@ -277,6 +292,8 @@ void CEscena::Mostrar(void)
         (*ivista3d)->Actualizar();
         (*ivista3d)->Mostrar();
     }
+=======
+>>>>>>> origin/master
 }
 
 void CEscena::Guardar(FILE* archivo)

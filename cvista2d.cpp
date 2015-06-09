@@ -20,6 +20,7 @@ CVista2D::CVista2D(QWidget *parent) :
     ui->graphicsViewLocal->setDragMode(QGraphicsView::ScrollHandDrag);
 
     QTransform TransformacionLocal;
+<<<<<<< HEAD
     TransformacionLocal.scale(0.8 * ui->graphicsViewLocal->geometry().width()  / (X_MAX - X_MIN),
                               0.8 * ui->graphicsViewLocal->geometry().height() / (Y_MAX - Y_MIN));
     ui->graphicsViewLocal->setTransform(TransformacionLocal, false);
@@ -27,6 +28,13 @@ CVista2D::CVista2D(QWidget *parent) :
     QTransform TransformacionGlobal;
     TransformacionGlobal.scale(0.8 * ui->graphicsViewGlobal->geometry().width()  / (X_MAX - X_MIN),
                                0.8 * ui->graphicsViewGlobal->geometry().height() / (Y_MAX - Y_MIN));
+=======
+    TransformacionLocal.scale(4.0, 4.0);
+    ui->graphicsViewLocal->setTransform(TransformacionLocal, false);
+
+    QTransform TransformacionGlobal;
+    TransformacionGlobal.scale(2.0, 2.0);
+>>>>>>> origin/master
     ui->graphicsViewGlobal->setTransform(TransformacionGlobal, false);
 
     lapiz_pared        .setColor(Qt::cyan);
