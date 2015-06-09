@@ -6,132 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>380</width>
-    <height>433</height>
+    <width>697</width>
+    <height>474</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Videojuego SII 2015</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QSlider" name="horizontalSliderPosicion">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>200</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>-100</number>
-    </property>
-    <property name="maximum">
-     <number>100</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QSlider" name="horizontalSliderVelocidad">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>80</y>
-      <width>200</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>-100</number>
-    </property>
-    <property name="maximum">
-     <number>100</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QSlider" name="horizontalSliderAceleracion">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>110</y>
-      <width>200</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>-100</number>
-    </property>
-    <property name="maximum">
-     <number>100</number>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelPosicion">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>50</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>p = 0.0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelVelocidad">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>80</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>v = 0.0</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="labelAceleracion">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>110</y>
-      <width>200</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>a = 0.0</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="labelTiempo">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>10</y>
-      <width>200</width>
-      <height>30</height>
+      <x>120</x>
+      <y>50</y>
+      <width>191</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -147,7 +36,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
+      <y>60</y>
       <width>101</width>
       <height>17</height>
      </rect>
@@ -161,32 +50,306 @@
      <string>Simular</string>
     </property>
    </widget>
-   <widget class="QGraphicsView" name="graphicsView">
+   <widget class="QLabel" name="labelVelocidadJuego">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>150</y>
-      <width>281</width>
-      <height>211</height>
+      <y>90</y>
+      <width>251</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Velocidad Juego = x10</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonNuevaEsfera">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nueva Esfera</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonNuevaVista2D">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nueva Vista 2D</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonNuevaVista3D">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>101</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nueva Vista 3D</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonNuevaCaja">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nueva Caja</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonNuevaPersona">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nueva Persona</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonNuevoRobot">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nuevo Robot</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonBorrarEsferas">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>190</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Borrar Esferas</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonBorrarCajas">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>210</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Borrar Cajas</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonBorrarPersonas">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>230</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Borrar Personas</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonBorrarRobots">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>250</y>
+      <width>91</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Borrar Robots</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonBorrarEscena">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>192</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Borrar Escena</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonNuevoControlPersona">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>140</y>
+      <width>131</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nuevo Control Persona</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonNuevoControlRobot">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>160</y>
+      <width>131</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nuevo Control Robot</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSliderVelocidadJuego">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="value">
+     <number>10</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBoxRemoto">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>70</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Remoto</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelNumeroConexiones">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>10</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Numero Conexiones = 0</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>10</y>
+      <width>371</width>
+      <height>391</height>
      </rect>
     </property>
    </widget>
+   <widget class="QTextEdit" name="textEditMensajes">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>10</y>
+      <width>201</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>graphicsView</zorder>
+   <zorder>labelTiempo</zorder>
+   <zorder>checkBoxSimular</zorder>
+   <zorder>labelVelocidadJuego</zorder>
+   <zorder>pushButtonNuevaEsfera</zorder>
+   <zorder>pushButtonNuevaVista2D</zorder>
+   <zorder>pushButtonNuevaVista3D</zorder>
+   <zorder>pushButtonNuevaCaja</zorder>
+   <zorder>pushButtonNuevaPersona</zorder>
+   <zorder>pushButtonNuevoRobot</zorder>
+   <zorder>pushButtonBorrarEsferas</zorder>
+   <zorder>pushButtonBorrarCajas</zorder>
+   <zorder>pushButtonBorrarPersonas</zorder>
+   <zorder>pushButtonBorrarRobots</zorder>
+   <zorder>pushButtonBorrarEscena</zorder>
+   <zorder>pushButtonNuevoControlPersona</zorder>
+   <zorder>pushButtonNuevoControlRobot</zorder>
+   <zorder>horizontalSliderVelocidadJuego</zorder>
+   <zorder>checkBoxRemoto</zorder>
+   <zorder>labelNumeroConexiones</zorder>
+   <zorder>textEditMensajes</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>380</width>
+     <width>697</width>
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuCEsfera_Modelo_Cinem_tico_Una_Dimensi_n">
+   <widget class="QMenu" name="menuJuego">
     <property name="title">
-     <string>CEsfera - Modelo Cinemático - Una Dimensión</string>
+     <string>Juego</string>
     </property>
+    <addaction name="actionNuevo"/>
+    <addaction name="actionAbrir"/>
+    <addaction name="actionCerrar"/>
+    <addaction name="actionGuardar"/>
+    <addaction name="actionGuardarComo"/>
+    <addaction name="actionSalir"/>
    </widget>
-   <addaction name="menuCEsfera_Modelo_Cinem_tico_Una_Dimensi_n"/>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionAcercaDe"/>
+   </widget>
+   <addaction name="menuJuego"/>
+   <addaction name="menuAyuda"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -197,6 +360,41 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNuevo">
+   <property name="text">
+    <string>Nuevo</string>
+   </property>
+  </action>
+  <action name="actionAbrir">
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+  </action>
+  <action name="actionCerrar">
+   <property name="text">
+    <string>Cerrar</string>
+   </property>
+  </action>
+  <action name="actionGuardar">
+   <property name="text">
+    <string>Guardar</string>
+   </property>
+  </action>
+  <action name="actionGuardarComo">
+   <property name="text">
+    <string>Guardar como...</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionAcercaDe">
+   <property name="text">
+    <string>Acerca de...</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
