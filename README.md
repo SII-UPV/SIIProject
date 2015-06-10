@@ -1,5 +1,7 @@
 # SIIProject Grupo 5
 
+Para compilarlo es necesario tener instaladas las librerías de OpenSceneGraph y demás dependencias. Más información en la carpeta dependencias.
+
 Interfaz gráfica 3D para el videojuego empleando las bibliotecas libres openscenegraph.
 
 - Conseguimos poder añadir elementos a la vista 3D, incluso partiendo de una vista vacia sin ocasionar cuelgues del sistema.
