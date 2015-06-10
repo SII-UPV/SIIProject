@@ -1,25 +1,28 @@
-"OpenSceneGraph-3.2.0.zip" son los fuentes de OpenSceneGraph que descargué de la página web.
-Versión 3.2.0
+"OpenSceneGraph-3.2.0.zip" son los fuentes de OpenSceneGraph que descarguÃ© de la pÃ¡gina web.
+VersiÃ³n 3.2.0
 
 
-"OpenSceneGraph" son las librerías de OpenSceneGraph (binarios generados con CMake) que podemos utilizar en nuestros proyectos de Qt Creator
+"OpenSceneGraph" son las librerÃ­as de OpenSceneGraph (binarios generados con CMake) que podemos utilizar en nuestros proyectos de Qt Creator
+
 He copiado este directorio en "C:\Archivos de programa (x86)"
-MinGW y CMake lo descargamos de la web ogicial, y ajustamos estas varibles de entorno a la última versión
-He añadido las siguientes variables de entorno...
+
+MinGW y CMake lo descargamos de la web ogicial, y ajustamos estas varibles de entorno a la Ãºltima versiÃ³n
+
+He aÃ±adido las siguientes variables de entorno...
 
    En mi usuario...
 
       OSG_LIBRARY_PATH
-      C:\Program Files (x86)\OpenSceneGraph\bin (o la subcarpeta "bin" de la carpeta donde tengáis la librería)
+      C:\Program Files (x86)\OpenSceneGraph\bin (o la subcarpeta "bin" de la carpeta donde tengÃ¡is la librerÃ­a)
 
       OSG_FILE_PATH
-      C:\Development\OpenSceneGraph\OpenSceneGraphData (o donde tengáis los archivos de datos que OSG carga)
+      C:\Development\OpenSceneGraph\OpenSceneGraphData (o donde tengÃ¡is los archivos de datos que OSG carga)
 
       OSG_NOTIFY_LEVEL
-      DEBUG (para que ahora que estamos desarrollando nos dé más información de depuración)
+      DEBUG (para que ahora que estamos desarrollando nos dÃ© mÃ¡s informaciÃ³n de depuraciÃ³n)
 
       PATH contiene...
-      C:\MinGW\bin;C:\Development\CMake\CMake 3.0.0\CMake\bin; (para que funcionasen MinGW y CMake) /*MinGW y CMake lo descargamos de la web ogicial, y ajustamos estas varibles de entorno a la última versión*/
+      C:\MinGW\bin;C:\Development\CMake\CMake 3.0.0\CMake\bin; (para que funcionasen MinGW y CMake) /*MinGW y CMake lo descargamos de la web ogicial, y ajustamos estas varibles de entorno a la Ãºltima versiÃ³n*/
 
    En el sistema...
 
@@ -28,19 +31,19 @@ He añadido las siguientes variables de entorno...
 
 
 *****
-Para compilar OpenSceneGraph utilicé...
+Para compilar OpenSceneGraph utilicÃ©...
 
 "MinGW" compilador de C++ (GNU)
-Versión 2.4.8
+VersiÃ³n 2.4.8
 
 "CMake"
-Versión 3.0.0
+VersiÃ³n 3.0.0
 
 
 *****
-Puede que todavía necesitemos descargar plugins para poder leer archivos de imágenes con compresión: jpg, png,... por ejemplo para cargar texturas y aplicarlas en los modelos.
+Puede que todavÃ­a necesitemos descargar plugins para poder leer archivos de imÃ¡genes con compresiÃ³n: jpg, png,... por ejemplo para cargar texturas y aplicarlas en los modelos.
 
 
 *****
 "OpenSceneGraphHelloWorld.pro" es una plantilla de un proyecto Qt que he utilizado para compilar el "Hola Mundo" con OSG.
-La ruta de INCLUDEPATH y LIBS son como las tengo en mi ordenador, cambiadlas según vuestro caso.
+La ruta de INCLUDEPATH y LIBS son como las tengo en mi ordenador, cambiadlas segÃºn vuestro caso.
